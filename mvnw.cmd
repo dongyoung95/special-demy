@@ -1,0 +1,15 @@
+@ECHO OFF
+SETLOCAL ENABLEDELAYEDEXPANSION
+SET "MAVEN_PROJECTBASEDIR=%~dp0"
+IF "%MAVEN_PROJECTBASEDIR:~-1%"=="\" SET "MAVEN_PROJECTBASEDIR=%MAVEN_PROJECTBASEDIR:~0,-1%"
+
+SET "JAVACMD=java"
+IF DEFINED JAVA_HOME SET "JAVACMD=%JAVA_HOME%\bin\java.exe"
+
+"%JAVACMD%" ^
+  %MAVEN_OPTS% ^
+  -classpath "%MAVEN_PROJECTBASEDIR%\.mvn\wrapper\maven-wrapper.jar" ^
+  "-Dmaven.multiModuleProjectDirectory=%MAVEN_PROJECTBASEDIR%" ^
+  org.apache.maven.wrapper.MavenWrapperMain %*
+
+ENDLOCAL & EXIT /B %ERRORLEVEL%

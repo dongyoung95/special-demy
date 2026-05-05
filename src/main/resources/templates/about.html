@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments/layout :: siteHead('소개')}"></head>
+<body>
+<header th:replace="~{fragments/layout :: siteHeader('about')}"></header>
+<main>
+    <section class="hero">
+        <div class="wrap prose">
+            <h1>특수데미 소개</h1>
+            <p class="lead">특수데미는 특수부대 선발을 목표로 하는 지원자의 체력·수영·멘탈·생활 루틴을 함께 설계하는 학원입니다. <strong>선발 대비 프로그램의 누적 합격률은 98%</strong>입니다.</p>
+            <ul class="instructor-cred-list muted">
+                <li><strong>해병대 수색대(정찰) 출신</strong> 강사가 훈련 방향을 잡습니다.</li>
+                <li><strong>해양경찰 특채 출신</strong> 경력을 바탕으로 물·규율·현장 감각을 설계에 녹입니다.</li>
+                <li><strong>서울경제TV 출연</strong> 등 언론·미디어 활동 이력이 있습니다.</li>
+            </ul>
+            <p class="muted about-instructor-link"><a th:href="@{/instructors}">강사 소개</a> 페이지에서 프로필 사진과 이력을 더 보실 수 있습니다.</p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="wrap prose">
+            <h2>실적·강사</h2>
+            <p>합격률은 말로만 쌓이지 않습니다. 특수데미는 선발 대비에 맞춘 프로그램 운영 결과로 <strong>누적 합격률이 98%</strong>로 집계되고 있으며, 구체적인 산출 기준·기간은 상담 시 안내합니다.</p>
+            <p>훈련 방향은 <strong>해병대 수색대(정찰) 출신 강사</strong>가 잡습니다. <strong>해양경찰 특채 출신</strong> 경력은 수영·루틴·멘탈 설계에 따로 녹여 냅니다. <strong>서울경제TV 출연</strong> 등으로 전해 온 톤과도 맞춥니다.</p>
+            <h2>철학</h2>
+            <p>“더 힘들게”가 아니라 “더 정확하게”입니다. 선발은 감정이 아니라 기록과 반복으로 증명됩니다.</p>
+            <h2>운영 방식</h2>
+            <ul>
+                <li><strong>등록은 상담 후 맞을 때만</strong> 진행합니다. 아무에게나 받지 않으며, 준비 태도·일정·목표를 함께 봅니다.</li>
+                <li>상담 후 현재 수준과 목표 일정에 맞춘 단계 설계</li>
+                <li>훈련 강도는 주간 피드백에 따라 조정</li>
+                <li>부상 위험이 있으면 대체 루틴으로 우회</li>
+            </ul>
+            <h2>안전</h2>
+            <p>과도한 자극보다 지속 가능한 볼륨을 우선합니다. 수영 구간은 반드시 감독 하에 진행합니다.</p>
+            <h2>이런 분께 추천합니다</h2>
+            <ul>
+                <li>UDT·해병수색대·특전사 등 선발 체력·수영을 현실적으로 준비하고 싶은 분</li>
+                <li>혼자 하다가 루틴이 무너지는 분</li>
+                <li>물 공포·호흡 문제를 해결하고 싶은 분</li>
+            </ul>
+            <div class="btn-row section-actions">
+                <a class="btn btn-primary" th:href="@{/contact}">상담 문의</a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer th:replace="~{fragments/layout :: siteFooter}"></footer>
+</body>
+</html>

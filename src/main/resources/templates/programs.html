@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments/layout :: siteHead('프로그램')}"></head>
+<body>
+<header th:replace="~{fragments/layout :: siteHeader('programs')}"></header>
+<main>
+    <section class="hero">
+        <div class="wrap">
+            <h1>훈련 프로그램</h1>
+            <p class="lead muted">대상·목표·내용을 명확히 하고, 상담에서 일정에 맞게 조합합니다. <strong>선발 대비 프로그램의 누적 합격률은 98%</strong>입니다. <strong>해병대 수색대(정찰) 출신 강사</strong>가 방향을 잡고, <strong>해양경찰 특채 출신</strong> 경력이 현장 감각을 보탭니다. <strong>서울경제TV 출연</strong> 등 미디어 활동 이력도 있습니다.</p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="wrap">
+            <div class="card-grid">
+                <article class="card prose">
+                    <h3>UDT / 특수부대 선발 대비반</h3>
+                    <p><strong>대상:</strong> 선발 일정이 잡혔거나 6개월 내 지원을 목표로 하는 분</p>
+                    <p><strong>목표:</strong> 체력 검정·수영 구간·컨디션 관리까지 일체형 루틴</p>
+                    <p><strong>내용:</strong> 주간 마이크로 사이클, 기록 관리, 약점 보강 세션</p>
+                </article>
+                <article class="card prose">
+                    <h3>수영 및 입영 대비반</h3>
+                    <p><strong>대상:</strong> 물이 무섭거나 자유형이 불안한 분</p>
+                    <p><strong>목표:</strong> 호흡·자세·지구력 기반의 연속 수영</p>
+                    <p><strong>내용:</strong> 단계별 거리·템포·회복 루틴</p>
+                </article>
+                <article class="card prose">
+                    <h3>체력 기초반</h3>
+                    <p><strong>대상:</strong> 운동 경험이 적거나 오래 쉰 분</p>
+                    <p><strong>목표:</strong> 관절·심폐 내구·근지구력 베이스</p>
+                    <p><strong>내용:</strong> 러닝·근력·코어의 균형 잡힌 볼륨</p>
+                </article>
+                <article class="card prose">
+                    <h3>단기 집중반</h3>
+                    <p><strong>대상:</strong> 짧은 기간에 집중이 필요한 분</p>
+                    <p><strong>목표:</strong> 약점 구간 집중 투입</p>
+                    <p><strong>내용:</strong> 집중 기간 스케줄·회복 관리</p>
+                </article>
+                <article class="card prose">
+                    <h3>1:1 상담 및 맞춤 루틴</h3>
+                    <p><strong>대상:</strong> 부상 이력·시간 제약이 있는 분</p>
+                    <p><strong>목표:</strong> 개인 변수를 반영한 루틴 설계</p>
+                    <p><strong>내용:</strong> 상담·주간 플랜·체크포인트</p>
+                </article>
+            </div>
+            <p class="muted section-note">준비물·가격·정원은 상담 시 안내합니다.</p>
+            <div class="btn-row section-actions">
+                <a class="btn btn-primary" th:href="@{/contact}">과정 상담하기</a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer th:replace="~{fragments/layout :: siteFooter}"></footer>
+</body>
+</html>

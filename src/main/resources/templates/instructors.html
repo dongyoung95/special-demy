@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments/layout :: siteHead('강사 소개')}"></head>
+<body>
+<header th:replace="~{fragments/layout :: siteHeader('instructors')}"></header>
+<main>
+    <section class="hero">
+        <div class="wrap prose">
+            <h1>강사 소개</h1>
+            <p class="lead">특수데미 선발 대비 코칭은 <strong>대표 강사 한 분</strong>이 맡습니다. <strong>해병대 수색대(정찰) 출신</strong>과 <strong>해양경찰 특채 출신</strong> 경력을 함께 갖고, 체력·수영·루틴·멘탈을 한 흐름으로 설계합니다.</p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="wrap wrap--instructor-profile">
+            <article class="instructor-spotlight instructor-spotlight--page sr-el">
+                <div class="instructor-spotlight__media">
+                    <img th:src="@{/img/instructors/profile.jpg}" width="960" height="720"
+                         alt="특수데미 대표 강사 프로필 사진" loading="lazy" decoding="async"/>
+                </div>
+                <div class="instructor-spotlight__body">
+                    <p class="instructor-card__kicker">선발 대비 · 대표 강사</p>
+                    <h2 class="instructor-card__title instructor-spotlight__title">대표 강사</h2>
+                    <ul class="instructor-card__list instructor-spotlight__list">
+                        <li><strong>해병대 수색대(정찰) 출신</strong> — 선발 체력·루틴의 방향과 단계 설계, 장시간·야외 활동에 맞는 컨디션 관점을 반영합니다.</li>
+                        <li><strong>해양경찰 특채 출신</strong> — 수영 구간·물 적응·호흡을 <strong>감독 하에</strong> 설계하고, 규율·현장 감각을 일상 루틴에 녹입니다.</li>
+                        <li>무리한 강도보다 <strong>지속 가능한 볼륨</strong>과 기록을 우선하며, 공포·부담이 큰 구간은 단계적으로만 올립니다.</li>
+                        <li>미디어·언론 활동으로는 <strong>서울경제TV 출연</strong> 등 이력이 있습니다.</li>
+                    </ul>
+                    <p class="muted instructor-spotlight__note">현장 사진은 <a th:href="${homeGalleryUrl}">홈 갤러리</a>에서도 확인하실 수 있습니다.</p>
+                </div>
+            </article>
+            <div class="btn-row section-actions">
+                <a class="btn btn-primary" th:href="@{/contact}">상담 문의</a>
+                <a class="btn btn-ghost" th:href="@{/about}">학원 소개</a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer th:replace="~{fragments/layout :: siteFooter}"></footer>
+</body>
+</html>

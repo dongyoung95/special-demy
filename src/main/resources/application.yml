@@ -1,0 +1,37 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: special-demy
+  web:
+    resources:
+      cache:
+        period: 0s
+  datasource:
+    url: jdbc:h2:file:./data/specialdemy;DB_CLOSE_DELAY=-1;AUTO_SERVER=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+special-demy:
+  external:
+    blog-url: https://blog.naver.com/tjalsrns
+    instagram-url: https://www.instagram.com/special_demy?igsh=MThnd2dndnhwMW55Zw==
+    youtube-url: "https://www.youtube.com/@%ED%8A%B9%EC%88%98%EB%8D%B0%EB%AF%B8-%EC%9D%B8%EA%B0%84%EA%B0%9C%EC%A1%B0%EC%9A%A9"
+    contact-email: contact@specialdemy.kr
+    kakao-channel-url: https://pf.kakao.com/_KxgiaG
+  admin:
+    username: admin
+    # 최초 기동 시 관리자가 없을 때만 사용됩니다. 운영 환경에서는 환경 변수로 덮어쓰세요.
+    initial-password: changeme

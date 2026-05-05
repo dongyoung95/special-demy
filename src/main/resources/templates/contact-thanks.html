@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments/layout :: siteHead('접수 완료')}"></head>
+<body>
+<header th:replace="~{fragments/layout :: siteHeader('contact')}"></header>
+<main>
+    <section class="hero">
+        <div class="wrap prose">
+            <h1>문의가 접수되었습니다</h1>
+            <p class="lead">특수데미에서 입력하신 연락처와 선호 답변 방식에 따라 순차적으로 답변드리겠습니다.</p>
+            <div class="btn-row">
+                <a class="btn btn-primary" th:href="${links.kakaoChannelUrl}" target="_blank" rel="noopener noreferrer">카카오톡으로 바로 문의</a>
+                <a class="btn btn-ghost" th:href="${links.youtubeUrl}" target="_blank" rel="noopener noreferrer">유튜브 콘텐츠 보기</a>
+                <a class="btn btn-ghost" th:href="@{/}">홈으로</a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer th:replace="~{fragments/layout :: siteFooter}"></footer>
+</body>
+</html>

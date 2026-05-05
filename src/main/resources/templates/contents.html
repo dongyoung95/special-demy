@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments/layout :: siteHead('콘텐츠')}"></head>
+<body>
+<header th:replace="~{fragments/layout :: siteHeader('contents')}"></header>
+<main>
+    <section class="hero">
+        <div class="wrap prose">
+            <h1>콘텐츠 허브</h1>
+            <p class="lead">긴 글·짧은 영상·라이브 분위기까지, 준비에 필요한 정보는 외부 채널에서 계속 쌓아갑니다.</p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="wrap">
+            <div class="card-grid">
+                <article class="card prose">
+                    <h3>블로그</h3>
+                    <p>준비법, 체력 루틴, 수영 팁 등 긴 호흡의 글.</p>
+                    <p><a class="btn btn-ghost" th:href="${links.blogUrl}" target="_blank" rel="noopener noreferrer">블로그로 이동</a></p>
+                </article>
+                <article class="card prose">
+                    <h3>인스타그램</h3>
+                    <p>짧은 훈련 클립, 현장 공지, 질문 스티커.</p>
+                    <p><a class="btn btn-ghost" th:href="${links.instagramUrl}" target="_blank" rel="noopener noreferrer">인스타로 이동</a></p>
+                </article>
+                <article class="card prose">
+                    <h3>유튜브</h3>
+                    <p>자가진단, 훈련 설명, 인터뷰.</p>
+                    <p><a class="btn btn-ghost" th:href="${links.youtubeUrl}" target="_blank" rel="noopener noreferrer">유튜브로 이동</a></p>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
+<footer th:replace="~{fragments/layout :: siteFooter}"></footer>
+</body>
+</html>

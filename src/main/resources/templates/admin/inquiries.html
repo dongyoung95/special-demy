@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>문의 목록 | 특수데미</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body>
+<main class="admin-wrap">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;align-items:center;">
+        <h1 style="margin:0;">문의 목록</h1>
+        <form th:action="@{/admin/logout}" method="post" style="margin:0;">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+            <button class="btn btn-ghost" type="submit">로그아웃</button>
+        </form>
+    </div>
+    <p class="muted" style="margin-top:0.5rem;">
+        <a th:href="@{/admin/inquiries}">전체</a>
+        <span th:each="st : ${inquiryStatuses}">
+            · <a th:href="@{/admin/inquiries(status=${st})}" th:text="${st.labelKo}">상태</a>
+        </span>
+    </p>
+    <div class="table-scroll">
+    <table class="admin-table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>이름</th>
+            <th>연락</th>
+            <th>희망 과정</th>
+            <th>상태</th>
+            <th>접수일시</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="q : ${inquiries}">
+            <td th:text="${q.id}">1</td>
+            <td th:text="${q.name}">이름</td>
+            <td>
+                <span th:if="${q.phone != null}" th:text="${q.phone}">전화</span>
+                <span th:if="${q.phone != null && q.email != null}"> / </span>
+                <span th:if="${q.email != null}" th:text="${q.email}">메일</span>
+            </td>
+            <td th:text="${q.program}">과정</td>
+            <td>
+                <span class="badge" th:text="${q.status.labelKo}">신규</span>
+            </td>
+            <td th:text="${#temporals.format(q.createdAt, 'yyyy-MM-dd HH:mm', T(java.time.ZoneId).of('Asia/Seoul'))}">일시</td>
+            <td><a th:href="@{/admin/inquiries/{id}(id=${q.id})}">상세</a></td>
+        </tr>
+        <tr th:if="${#lists.isEmpty(inquiries)}">
+            <td colspan="7" class="muted">문의가 없습니다.</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+</main>
+</body>
+</html>

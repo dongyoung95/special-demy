@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<body>
+<!-- 카카오톡 공식 로고 에셋(제공 이미지): 노란 스쿼클 + 갈색 말풍선 + TALK -->
+<img th:fragment="kakaoTalkIcon (w)"
+     class="kakao-talk-icon-img"
+     th:src="@{/img/kakao-talk-icon.png}"
+     th:width="${w}"
+     th:height="${w}"
+     alt=""
+     width="24"
+     height="24"
+     decoding="async"
+     aria-hidden="true"/>
+</body>
+</html>

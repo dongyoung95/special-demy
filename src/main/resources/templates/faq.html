@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments/layout :: siteHead('FAQ')}"></head>
+<body>
+<header th:replace="~{fragments/layout :: siteHeader('faq')}"></header>
+<main>
+    <section class="hero faq-hero">
+        <div class="wrap faq-hero-inner">
+            <p class="faq-hero-kicker">FAQ</p>
+            <h1>자주 묻는 질문</h1>
+            <p class="lead muted faq-hero-lead">문의 전에 읽어 주시면 상담 시간을 더 알차게 쓸 수 있습니다.</p>
+        </div>
+    </section>
+    <section class="section faq-section">
+        <div class="wrap">
+            <div class="faq-list" role="list">
+                <details class="faq-item" role="listitem">
+                    <summary class="faq-item__summary">체력이 부족해도 시작할 수 있나요?</summary>
+                    <div class="faq-item__body">
+                        <p>가능합니다. 대신 “언제까지 어떤 기록을 만들지”를 먼저 정합니다. 기초반에서 볼륨을 쌓은 뒤 선발 대비로 넘어가는 경우가 많습니다.</p>
+                    </div>
+                </details>
+                <details class="faq-item" role="listitem">
+                    <summary class="faq-item__summary">수영을 못해도 등록할 수 있나요?</summary>
+                    <div class="faq-item__body">
+                        <p>가능합니다. 물 적응부터 호흡·자세 순으로 단계를 나눕니다. 공포가 크다면 일정을 더 보수적으로 잡습니다.</p>
+                    </div>
+                </details>
+                <details class="faq-item" role="listitem">
+                    <summary class="faq-item__summary">몇 개월 정도 준비해야 하나요?</summary>
+                    <div class="faq-item__body">
+                        <p>현재 기록·목표 부대·지원 시기에 따라 다릅니다. 상담에서 주간 가능 횟수를 기준으로 최소 기간을 제안합니다.</p>
+                    </div>
+                </details>
+                <details class="faq-item" role="listitem">
+                    <summary class="faq-item__summary">UDT, SSU, 해병수색대, 특전사 준비가 모두 가능한가요?</summary>
+                    <div class="faq-item__body">
+                        <p>체력·수영·루틴의 큰 축은 공통이며, 세부 검정 항목에 맞춰 보강을 조정합니다.</p>
+                    </div>
+                </details>
+                <details class="faq-item" role="listitem">
+                    <summary class="faq-item__summary">훈련 강도는 어느 정도인가요?</summary>
+                    <div class="faq-item__body">
+                        <p>“매일 지치게”가 아니라 “매일 지속 가능하게”를 우선합니다. 그래야 시험 주간에 피크를 올릴 수 있습니다.</p>
+                    </div>
+                </details>
+                <details class="faq-item" role="listitem">
+                    <summary class="faq-item__summary">부상 위험은 어떻게 관리하나요?</summary>
+                    <div class="faq-item__body">
+                        <p>통증·수면·주간 볼륨을 함께 봅니다. 필요 시 대체 동작과 회복 세션으로 전환합니다.</p>
+                    </div>
+                </details>
+                <details class="faq-item" role="listitem">
+                    <summary class="faq-item__summary">상담 후 바로 등록해야 하나요?</summary>
+                    <div class="faq-item__body">
+                        <p>아닙니다. 일정과 몸 상태를 고려해 결정하세요.</p>
+                    </div>
+                </details>
+            </div>
+            <div class="btn-row section-actions faq-cta">
+                <a class="btn btn-primary" th:href="@{/contact}">그래도 문의하기</a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer th:replace="~{fragments/layout :: siteFooter}"></footer>
+</body>
+</html>

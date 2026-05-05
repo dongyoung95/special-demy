@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head th:replace="~{fragments/layout :: siteHead('홈')}"></head>
+<body>
+<header th:replace="~{fragments/layout :: siteHeader('home')}"></header>
+
+<main>
+    <section class="hero hero-scroll">
+        <div class="scroll-scrub-zone scroll-scrub-zone--hero" data-story-zone>
+            <div class="scroll-scrub-sticky scroll-scrub-sticky--hero">
+                <div class="hero-media-layer" aria-hidden="true">
+                    <video class="hero-bg-video" muted autoplay loop playsinline disablepictureinpicture
+                           aria-label="특수데미 메인 비주얼 배경 영상 (3840×2160 24fps)">
+                        <source th:src="@{/video/12441801_3840_2160_24fps.mp4}" type="video/mp4"/>
+                    </video>
+                    <div class="hero-bg-video-scrim"></div>
+                </div>
+                <div class="wrap hero-scrub-content" role="region" aria-label="소개 멘트">
+                    <div class="scroll-story" data-scroll-story>
+                        <p class="story-slab story-slab--hook" data-story-range="0.015,0.26">특수부대가 학원이 꼭 필요할까?</p>
+                        <p class="story-slab story-slab--hook" data-story-range="0.28,0.52">특수부대를 내가 갈 수 있을까?</p>
+                        <p class="story-slab story-slab--hook" data-story-range="0.54,0.76">준비 없이 지원부터 해도 될까?</p>
+                        <p class="story-slab story-slab--head" data-story-range="0.78,0.895">특수부대를 꿈꾸지만, 아직 물이 무섭다면 이 페이지를 나가지 마세요.</p>
+                        <p class="story-slab story-slab--lead" data-story-range="0.91,0.998">
+                            <span class="lead-line">특수데미는 UDT·SEAL 등 고강도 선발을 목표로 하는 분께, 체력·수영·멘탈·생활 루틴을 함께 다듬는 <strong>선발 대비 전문 학원</strong>입니다.</span>
+                            <span class="lead-line"><strong>선발 대비 프로그램의 누적 합격률은 98%</strong>입니다.</span>
+                            <span class="lead-line">대표 강사는 <strong>해병대 수색대(정찰) 출신</strong>이며, <strong>해양경찰 특채 출신</strong> 경력을 함께 갖고 있습니다.</span>
+                            <span class="lead-line"><strong>서울경제TV</strong>에 출연한 바도 있습니다.</span>
+                            <span class="lead-line">막연한 로망이 아니라, 지원서를 쓰기 전에 스스로를 걸러내는 준비를 함께합니다.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section hero-cta-section" aria-label="상담·프로그램 바로가기">
+        <div class="wrap hero-cta-inner">
+            <h2 class="hero-cta-title">다음 한 걸음</h2>
+            <p class="hero-cta-lead muted">상담은 등록 확정이 아닙니다. 지금 상태·일정·목표를 짚고, 함께 갈 수 있는지부터 확인합니다.</p>
+            <ul class="hero-cta-pills" aria-label="상담 안내 요약">
+                <li>기록과 가능한 일정을 먼저 봅니다</li>
+                <li>맞지 않으면 등록을 권하지 않습니다</li>
+                <li>커리큘럼은 상담 뒤에 맞춥니다</li>
+            </ul>
+            <div class="btn-row hero-cta-row">
+                <a class="btn btn-primary" th:href="@{/contact}">내 준비 상태 상담하기</a>
+                <a class="btn btn-ghost" th:href="@{/programs}">훈련 프로그램 보기</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-strip scroll-reveal">
+        <div class="wrap">
+            <p class="landing-gate sr-el">특수데미를 처음 들었나요? 그렇다면 나가도 됩니다.</p>
+            <p class="landing-gate-sub muted sr-el">진지하게 몸을 바꿀 생각이 없다면, 여기서 멈추는 게 맞습니다. 그래도 마음이 조금이라도 움직였다면, 2분만 더 읽어 보세요.</p>
+            <p class="landing-gate-note muted sr-el">특수데미는 <strong>아무에게나 등록을 받지 않습니다.</strong> 지원자가 학원을 고르듯, 저희도 준비 태도·일정·목표가 맞는 경우에만 함께합니다.</p>
+        </div>
+    </section>
+
+    <section class="section section-compact-narrative">
+        <div class="scroll-scrub-zone scroll-scrub-zone--compact" data-story-zone>
+            <div class="wrap scroll-scrub-sticky">
+                <div class="scroll-story scroll-story--compact" data-scroll-story>
+                    <p class="story-slab story-slab--block-title" data-story-range="0.02,0.46">
+                        <span class="compact-story-slab-inner">
+                            <span class="compact-story-kicker">기록이 먼저입니다</span>
+                            <span class="compact-story-headline">무모한 각오 대신, 기록으로 증명되는 몸. 그렇게 가는 이유는 두어 분이면 짐작할 수 있습니다.</span>
+                        </span>
+                    </p>
+                    <div class="story-slab" data-story-range="0.48,0.96">
+                        <div class="compact-story-slab-inner">
+                            <div class="compact-story-panel">
+                                <ul class="compact-story-pill-row" aria-label="특수데미 세 축">
+                                    <li><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i> 기록</li>
+                                    <li><i class="fa-solid fa-person-swimming" aria-hidden="true"></i> 수영</li>
+                                    <li><i class="fa-solid fa-calendar-week" aria-hidden="true"></i> 루틴</li>
+                                </ul>
+                                <p class="muted prose compact-story-prose">숫자·사례·역설만으로 붙잡는 식의 마케팅과 달리, 특수데미는 <strong>기록·수영·루틴</strong>으로 현실을 보여 줍니다.</p>
+                                <p class="muted prose compact-story-prose">영상 속 주인공이 아니라, 먼저는 <strong>내 주간 기록표</strong>입니다.</p>
+                                <p class="compact-story-select muted"><strong>저희도 지원자를 가립니다.</strong> 상담에서 방향이 맞지 않으면 등록을 권하지 않습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section compact-story-actions-section" aria-label="훈련·자가점검 영상">
+        <div class="wrap">
+            <div class="btn-row compact-story-cta-row">
+                <a class="btn btn-ghost" th:href="${links.youtubeUrl}" target="_blank" rel="noopener noreferrer">훈련·자가점검 영상 보러 가기</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-instructors-teaser scroll-reveal" id="instructors-teaser" aria-label="강사 소개">
+        <div class="wrap">
+            <h2 class="sr-el">대표 강사</h2>
+            <p class="muted sr-el instructor-teaser-lead">선발 대비 훈련 방향과 수영·루틴·물 적응을 한 분이 <strong>해병대 수색대(정찰) 출신</strong>과 <strong>해양경찰 특채 출신</strong> 경력을 함께 갖고 설계·감독합니다. 언론·미디어로는 <strong>서울경제TV 출연</strong> 이력이 있습니다.</p>
+            <article class="instructor-spotlight sr-el">
+                <div class="instructor-spotlight__media">
+                    <img th:src="@{/img/instructors/profile.jpg}" width="960" height="720"
+                         alt="특수데미 대표 강사 프로필 사진" loading="lazy" decoding="async"/>
+                </div>
+                <div class="instructor-spotlight__body">
+                    <p class="instructor-card__kicker">선발 대비 코치</p>
+                    <h3 class="instructor-card__title">대표 강사</h3>
+                    <ul class="instructor-card__list instructor-spotlight__list">
+                        <li>체력·루틴의 방향과 단계 설계, 현장에 가까운 컨디션 관점을 맡습니다.</li>
+                        <li>수영 구간·물 적응·호흡은 <strong>감독 하에</strong> 진행하며, 규율·루틴에 녹입니다.</li>
+                        <li>무리한 강도보다 <strong>지속 가능한 볼륨</strong>과 기록을 우선합니다.</li>
+                    </ul>
+                </div>
+            </article>
+            <div class="btn-row instructor-teaser-actions">
+                <a class="btn btn-primary sr-el" th:href="@{/instructors}">사진·이력 더 보기</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section scroll-reveal">
+        <div class="wrap">
+            <div class="stat-row" aria-label="실적·강사·미디어·훈련 설계 요약">
+                <div class="stat-cell sr-el">
+                    <div class="stat-value">98%</div>
+                    <div class="stat-label">선발 대비 프로그램 누적 합격률</div>
+                </div>
+                <div class="stat-cell sr-el">
+                    <div class="stat-value">수색대</div>
+                    <div class="stat-label">해병대 수색대(정찰) 출신 강사</div>
+                </div>
+                <div class="stat-cell sr-el">
+                    <div class="stat-value">해경 특채</div>
+                    <div class="stat-label">해양경찰 특채 출신 경력</div>
+                </div>
+                <div class="stat-cell sr-el">
+                    <div class="stat-value">TV</div>
+                    <div class="stat-label">서울경제TV 출연</div>
+                </div>
+                <div class="stat-cell sr-el">
+                    <div class="stat-value">3축</div>
+                    <div class="stat-label">체력 · 수영 · 루틴을 동시에 본다</div>
+                </div>
+                <div class="stat-cell sr-el">
+                    <div class="stat-value">주 1회</div>
+                    <div class="stat-label">기록 점검(거리·타임·컨디션)을 습관화</div>
+                </div>
+            </div>
+            <p class="muted sr-el stat-row-footnote">강도는 물 공포 → 호흡 → 거리 → 템포 순으로만 올립니다.</p>
+        </div>
+    </section>
+
+    <section class="section section-photo-gallery scroll-reveal" id="photo-gallery" aria-label="현장 사진 갤러리">
+        <div class="wrap">
+            <h2 class="sr-el">현장 사진</h2>
+            <p class="muted sr-el photo-gallery-lead">훈련·행사·미디어 현장을 사진으로도 확인하실 수 있습니다.</p>
+            <div class="photo-gallery" role="list">
+                <figure class="photo-gallery__item sr-el" role="listitem">
+                    <div class="photo-gallery__frame">
+                        <img th:src="@{/img/gallery/1.jpg}" width="960" height="720" alt="특수데미 현장 사진 1" loading="lazy" decoding="async"/>
+                    </div>
+                </figure>
+                <figure class="photo-gallery__item sr-el" role="listitem">
+                    <div class="photo-gallery__frame">
+                        <img th:src="@{/img/gallery/2.jpg}" width="960" height="720" alt="특수데미 현장 사진 2" loading="lazy" decoding="async"/>
+                    </div>
+                </figure>
+                <figure class="photo-gallery__item sr-el" role="listitem">
+                    <div class="photo-gallery__frame">
+                        <img th:src="@{/img/gallery/3.jpg}" width="960" height="720" alt="특수데미 현장 사진 3" loading="lazy" decoding="async"/>
+                    </div>
+                </figure>
+                <figure class="photo-gallery__item sr-el" role="listitem">
+                    <div class="photo-gallery__frame">
+                        <img th:src="@{/img/gallery/4.jpg}" width="960" height="720" alt="특수데미 현장 사진 4" loading="lazy" decoding="async"/>
+                    </div>
+                </figure>
+                <figure class="photo-gallery__item sr-el" role="listitem">
+                    <div class="photo-gallery__frame">
+                        <img th:src="@{/img/gallery/5.jpg}" width="960" height="720" alt="특수데미 현장 사진 5" loading="lazy" decoding="async"/>
+                    </div>
+                </figure>
+                <figure class="photo-gallery__item sr-el" role="listitem">
+                    <div class="photo-gallery__frame">
+                        <img th:src="@{/img/gallery/6.jpg}" width="960" height="720" alt="특수데미 현장 사진 6" loading="lazy" decoding="async"/>
+                    </div>
+                </figure>
+            </div>
+            <p class="muted sr-el photo-gallery-hint">사진은 준비되는 대로 이 영역에 채워집니다.</p>
+        </div>
+    </section>
+
+    <section class="section scroll-reveal">
+        <div class="wrap prose">
+            <p class="block-title sr-el">일반 헬스의 문제는, 선발 일정이 없다는 겁니다</p>
+            <p class="sr-el">특수데미는 “그날 컨디션만 좋은 날”이 아니라, <strong>시험 주간에 몸의 피크를 맞추는 설계</strong>를 합니다. 다른 체력 학원과는 접근이 다릅니다.</p>
+        </div>
+    </section>
+
+    <section class="section scroll-reveal">
+        <div class="wrap prose">
+            <h2 class="sr-el">대부분은 지원서를 쓰기 전에 탈락합니다</h2>
+            <p class="sr-el">체력 숫자만 부족해서가 아닙니다. 준비를 <strong>현실이라고 착각</strong>하기 때문입니다.</p>
+            <ul>
+                <li class="sr-el">짧은 영상만 보고 “나도 할 수 있다”고 느낍니다.</li>
+                <li class="sr-el">팔굽혀펴기 개수에는 집착하지만, 매일 이어지는 루틴은 없습니다.</li>
+                <li class="sr-el">물 적응·호흡·회복·멘탈은 혼자 두면 쉽게 무너집니다.</li>
+                <li class="sr-el">선발 준비에서 중요한 것은 “열심히”보다 “정확히”입니다.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section scroll-reveal">
+        <div class="wrap prose">
+            <h2 class="sr-el">특수데미가 다른 이유</h2>
+            <ul>
+                <li class="sr-el"><strong>아무나 받지 않습니다.</strong> 상담에서 목표·기록·생활 패턴을 보고, 맞지 않으면 등록을 권하지 않습니다.</li>
+                <li class="sr-el"><strong>선발 대비 프로그램의 누적 합격률은 98%</strong>로, 설계를 숫자로도 뒷받침합니다.</li>
+                <li class="sr-el"><strong>대표 강사 한 분</strong>이 <strong>해병대 수색대(정찰) 출신</strong>과 <strong>해양경찰 특채 출신</strong> 경력을 함께 갖고, 수영·루틴·멘탈과 물·규율·현장 감각을 설계에 녹여 짚어 줍니다.</li>
+                <li class="sr-el"><strong>서울경제TV 출연</strong> 등 언론·미디어를 통해 전달해 온 내용과 톤을 사이트에서도 맞춥니다.</li>
+                <li class="sr-el">군대 로망이 아니라, 선발에 필요한 몸과 습관을 만듭니다.</li>
+                <li class="sr-el">체력·수영·멘탈·생활 루틴을 한 번에 봅니다.</li>
+                <li class="sr-el">상담에서 무리한 등록을 밀어붙이지 않고, 지금 상태를 먼저 짚습니다.</li>
+                <li class="sr-el">부상을 줄이기 위해 단계별로만 강도를 올립니다.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section scroll-reveal">
+        <div class="wrap">
+            <h2 class="sr-el">프로그램 한눈에 보기</h2>
+            <div class="card-grid">
+                <article class="card sr-el">
+                    <h3>선발 대비반</h3>
+                    <p>체력·수영·루틴을 선발 일정에 맞춰 설계합니다.</p>
+                </article>
+                <article class="card sr-el">
+                    <h3>물 적응·수영</h3>
+                    <p>공포부터 호흡·자세까지 단계적으로 적응합니다.</p>
+                </article>
+                <article class="card sr-el">
+                    <h3>기초 체력</h3>
+                    <p>지금의 몸 상태에서 안전하게 베이스를 쌓습니다.</p>
+                </article>
+                <article class="card sr-el">
+                    <h3>단기 집중</h3>
+                    <p>짧은 기간에 집중이 필요할 때 촘촘하게 밀어붙입니다.</p>
+                </article>
+                <article class="card sr-el">
+                    <h3>1:1 맞춤</h3>
+                    <p>약점·일정·부상 이력을 반영한 개인 루틴을 설계합니다.</p>
+                </article>
+            </div>
+            <p class="muted sr-el section-footnote">자세한 커리큘럼은 <a th:href="@{/programs}">프로그램</a> 페이지에서 확인하세요.</p>
+        </div>
+    </section>
+
+    <section class="section scroll-reveal">
+        <div class="wrap">
+            <h2 class="sr-el">30초 자가 점검</h2>
+            <p class="muted sr-el">해당되는 항목만 골라 체크해 보세요. 잠깐 멈추고, 지금 위치를 가늠하는 데 쓰면 됩니다.</p>
+            <ul class="checklist" id="diag-list">
+                <li class="sr-el"><label><input type="checkbox" data-diag/> 3km 달리기 기록을 숫자로 말할 수 있다</label></li>
+                <li class="sr-el"><label><input type="checkbox" data-diag/> 자유형 200m를 중간 없이 완주할 수 있다</label></li>
+                <li class="sr-el"><label><input type="checkbox" data-diag/> 주 4회 이상, 4주 이상 끊기지 않고 운동했다</label></li>
+                <li class="sr-el"><label><input type="checkbox" data-diag/> 훈련 일지(강도·수면·컨디션)를 남긴다</label></li>
+                <li class="sr-el"><label><input type="checkbox" data-diag/> 물속에서 호흡이 무너지지 않는다</label></li>
+                <li class="sr-el"><label><input type="checkbox" data-diag/> 체력보다 먼저 생활 패턴을 바꿀 각오가 있다</label></li>
+            </ul>
+            <div class="diag-result" id="diag-result" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+            <div class="btn-row sr-el section-actions">
+                <a class="btn btn-primary" th:href="@{/contact}">결과와 상관없이, 상담만 받아보기</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section scroll-reveal">
+        <div class="wrap prose">
+            <h2 class="sr-el">후기·사례는 계속 쌓입니다</h2>
+            <p class="sr-el">합격 사례부터 훈련 전후 변화, 수영 공포 극복, 루틴 형성까지 <a th:href="@{/reviews}">후기</a>에서 확인할 수 있습니다.</p>
+        </div>
+    </section>
+
+    <section class="section scroll-reveal">
+        <div class="wrap prose">
+            <h2 class="sr-el">콘텐츠로 더 깊게</h2>
+            <p class="sr-el">긴 글은 블로그, 짧은 현장은 인스타그램, 설명·인터뷰는 유튜브에서 이어집니다.</p>
+            <div class="btn-row sr-el">
+                <a class="btn btn-ghost" th:href="${links.blogUrl}" target="_blank" rel="noopener noreferrer">블로그</a>
+                <a class="btn btn-ghost" th:href="${links.instagramUrl}" target="_blank" rel="noopener noreferrer">인스타그램</a>
+                <a class="btn btn-ghost" th:href="${links.youtubeUrl}" target="_blank" rel="noopener noreferrer">유튜브</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-strip scroll-reveal">
+        <div class="wrap prose">
+            <p class="block-title sr-el">특수데미는 상담을 이렇게 받습니다</p>
+            <ol class="rule-list">
+                <li class="sr-el">특수데미도 <strong>지원자를 가립니다.</strong> 등록은 상담을 거쳐 방향이 맞을 때만 진행합니다.</li>
+                <li class="sr-el">가능한 일정·기록 없이 “불안한 마음만”으로 오면, 솔직히 도움이 제한됩니다.</li>
+                <li class="sr-el">부상 위험이 큰 무리한 루틴은 처음부터 권하지 않습니다.</li>
+                <li class="sr-el">문의가 지나치게 막연하면, FAQ·콘텐츠를 먼저 읽고 오라고 안내할 수 있습니다.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="section scroll-reveal">
+        <div class="wrap prose">
+            <h2 class="sr-el">문의하지 마세요…가 아니라, 신중히 문의하세요</h2>
+            <p class="sr-el">급하게 등록하지 마세요. 왜 특수부대인지, 지금 무엇이 부족한지부터 짚은 뒤 연락 주세요. <strong>모든 문의에 등록을 약속하지는 않습니다.</strong> 서로 맞을 때만 이어갑니다.</p>
+            <div class="btn-row sr-el">
+                <a class="btn btn-primary" th:href="@{/contact}">문의 채널 열기</a>
+                <a class="btn btn-ghost" th:href="@{/faq}">FAQ 먼저 읽기</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer th:replace="~{fragments/layout :: siteFooter}"></footer>
+<script th:src="@{/js/scroll-story.js(v=20260506g)}"></script>
+<script th:src="@{/js/scroll-reveal.js(v=20260504t)}"></script>
+<script>
+    (function () {
+        var boxes = document.querySelectorAll("[data-diag]");
+        var out = document.getElementById("diag-result");
+        if (!out || !boxes.length) {
+            return;
+        }
+        function render() {
+            var n = 0;
+            boxes.forEach(function (b) {
+                if (b.checked) {
+                    n++;
+                }
+            });
+            var text;
+            if (n <= 2) {
+                text = "0~2개: 기초·생활 루틴부터 점검하는 편을 권합니다. 물과 체력 베이스가 먼저입니다.";
+            } else if (n <= 4) {
+                text = "3~4개: 선발 일정에 맞춘 대비 루틴 설계가 필요합니다. 약점을 숫자로 남기세요.";
+            } else {
+                text = "5개 이상: 단기 목표와 기록 향상 전략을 함께 세우는 단계입니다. 상담 시 기록을 가져오세요.";
+            }
+            out.textContent = text;
+            out.hidden = false;
+        }
+        boxes.forEach(function (b) {
+            b.addEventListener("change", render);
+        });
+    })();
+</script>
+</body>
+</html>

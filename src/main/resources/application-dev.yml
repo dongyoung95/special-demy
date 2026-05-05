@@ -1,0 +1,36 @@
+# 로컬 개발 서버: MySQL (root/root, DB specialdemy)
+# 실행: mvnw.cmd spring-boot:run -Dspring-boot.run.profiles=dev
+# DB가 없으면 JDBC URL의 createDatabaseIfNotExist 로 생성 시도(권한 필요)
+#
+# CSS/JS/템플릿은 target 복사 없이 소스(src/main/resources)에서 직접 제공 → 저장 후 새로고침만으로 반영(실행 워킹 디렉터리=프로젝트 루트).
+
+special-demy:
+  external:
+    kakao-channel-url: https://pf.kakao.com/_KxgiaG
+
+spring:
+  thymeleaf:
+    cache: false
+    prefix: file:./src/main/resources/templates/
+  web:
+    resources:
+      static-locations:
+        - file:./src/main/resources/static/
+        - classpath:/META-INF/resources/
+        - classpath:/resources/
+        - classpath:/static/
+        - classpath:/public/
+  devtools:
+    restart:
+      enabled: true
+      additional-paths:
+        - src/main/resources/templates
+        - src/main/resources/static
+  datasource:
+    url: jdbc:mysql://localhost:3306/specialdemy?createDatabaseIfNotExist=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
