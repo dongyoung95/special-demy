@@ -1,0 +1,38 @@
+# 운영 서버 설정
+# 실행: java -jar target/special-demy-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod
+#
+# 필수 환경 변수:
+# - SPRING_DATASOURCE_URL
+# - SPRING_DATASOURCE_USERNAME
+# - SPRING_DATASOURCE_PASSWORD
+# - SPECIAL_DEMY_ADMIN_INITIAL_PASSWORD
+
+server:
+  port: ${SERVER_PORT:8080}
+
+spring:
+  thymeleaf:
+    cache: true
+  web:
+    resources:
+      cache:
+        period: 30d
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  h2:
+    console:
+      enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: false
+
+special-demy:
+  admin:
+    username: ${SPECIAL_DEMY_ADMIN_USERNAME:admin}
+    initial-password: ${SPECIAL_DEMY_ADMIN_INITIAL_PASSWORD}
