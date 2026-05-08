@@ -23,7 +23,6 @@ spring:
     properties:
       hibernate:
         format_sql: true
-
 special-demy:
   external:
     blog-url: https://blog.naver.com/tjalsrns
@@ -31,6 +30,17 @@ special-demy:
     youtube-url: "https://www.youtube.com/@%ED%8A%B9%EC%88%98%EB%8D%B0%EB%AF%B8-%EC%9D%B8%EA%B0%84%EA%B0%9C%EC%A1%B0%EC%9A%A9"
     contact-email: contact@specialdemy.kr
     kakao-channel-url: https://pf.kakao.com/_KxgiaG
+  # 홈: 미디어 소개 유튜브 임베드 — video-id 는 YouTube 주소의 v= 값 또는 /embed/ 뒤 ID
+  media-spotlight:
+    section-title: 미디어에 소개된 특수데미
+    section-lead: 언론·방송 등에서 소개된 유튜브 영상입니다. 아래에서 바로 재생할 수 있습니다.
+    empty-hint: 아직 등록된 영상이 없습니다. 운영자는 application.yml 의 special-demy.media-spotlight.videos 에 동영상 ID를 추가하세요.
+    videos: []
+    # 예시 (주석 해제 후 video-id 만 실제 값으로 바꾸세요):
+    # videos:
+    #   - video-id: dQw4w9WgXcQ
+    #     title: 서울경제TV (예시)
+    #     caption: 출연 하이라이트 (선택)
   admin:
     username: admin
     # 최초 기동 시 관리자가 없을 때만 사용됩니다. 운영 환경에서는 환경 변수로 덮어쓰세요.

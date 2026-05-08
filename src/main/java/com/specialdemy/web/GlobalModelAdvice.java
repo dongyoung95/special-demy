@@ -1,6 +1,7 @@
 package com.specialdemy.web;
 
 import com.specialdemy.config.ExternalLinksProperties;
+import com.specialdemy.config.MediaSpotlightProperties;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -9,14 +10,23 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 public class GlobalModelAdvice {
 
     private final ExternalLinksProperties externalLinksProperties;
+    private final MediaSpotlightProperties mediaSpotlightProperties;
 
-    public GlobalModelAdvice(ExternalLinksProperties externalLinksProperties) {
+    public GlobalModelAdvice(
+            ExternalLinksProperties externalLinksProperties,
+            MediaSpotlightProperties mediaSpotlightProperties) {
         this.externalLinksProperties = externalLinksProperties;
+        this.mediaSpotlightProperties = mediaSpotlightProperties;
     }
 
     @ModelAttribute("links")
     public ExternalLinksProperties externalLinks() {
         return externalLinksProperties;
+    }
+
+    @ModelAttribute("mediaSpotlight")
+    public MediaSpotlightProperties mediaSpotlight() {
+        return mediaSpotlightProperties;
     }
 
     /**
